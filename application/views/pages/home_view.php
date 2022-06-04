@@ -5,7 +5,7 @@
 
       <div class="col-lg-12 d-lg-block">
         <div class="mx-5">
-          <h1 class="title">Student Management System</h1>
+          <h1 class="title">Trainee Management System</h1>
         </div>
       </div>
         <div id="first">
