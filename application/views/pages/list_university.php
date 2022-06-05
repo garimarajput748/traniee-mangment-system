@@ -2,7 +2,7 @@
 
  <?php 
 
-			if($this->session->has_userdata('log_email')){		
+			if($this->session->has_userdata('email')){		
 			$fname = $this->session->userdata('fname');
 			$lname = $this->session->userdata('lname');
 			}else {
@@ -18,7 +18,7 @@
 	<h4><?php echo "Hello, ".$fname." ".$lname."! "; ?></h4>
 </div>
 <div class="col-2">
-	<a href="<?php echo base_url().'dashboard_controller/university_dashboard'; ?>" name="stu_update" class="btn btn-danger mb-3 mt-0" style="margin-left: 62px !important; border-radius:0px;">Update Details</a>
+	<a href="<?php echo base_url().'dashboard_controller/admin_dashboard'; ?>" name="stu_update" class="btn btn-danger mb-3 mt-0" style="margin-left: 62px !important; border-radius:0px;">Update Details</a>
 </div>
 	
 <table class="table table-borderless text-center table-striped table-hover">

@@ -36,8 +36,8 @@ $(document).ready(function() {
 
 </script>
 <div class="container-fluid">
-		<span class="display-4">List of Mentor's</span>
-		<?php echo anchor('dashboard_controller/add_mentor', '<i class="fas fa-user"></i> Add Mentor',array("class"=>"btn btn-success float-right")); 
+		<span class="display-4">List of Trainor's</span>
+		<?php echo anchor('dashboard_controller/add_trainor', '<i class="fas fa-user"></i> Add Trainor',array("class"=>"btn btn-success float-right")); 
 		
 		// <input type="submit" class="btn btn-danger mt-1" style="border-radius:0px;" value="Delete Selected" name="delete_student">
 		?>
@@ -74,8 +74,8 @@ $(document).ready(function() {
 					echo "<td>".$row['lname']."</td>";
 					echo "<td>".$row['email']."</td>";
 					echo "<td>".$row['password']."</td>";
-					echo "<td>" . anchor('dashboard_controller/add_mentor?action=edit&edit_id=' . $row['id'], '<i class="fas fa-edit"></i>', array('onclick' => "return confirm('Do you want edit this record?')")) . "</td>";
-					echo "<td>" . anchor('dashboard_controller/delete_mentor?id=' . $row['id'], '<i class="fas fa-trash-alt" style="color:red;"></i>', array('onclick' => "return confirm('Do you want delete this record?')")) . "</td>";
+					echo "<td>" . anchor('dashboard_controller/add_trainor?action=edit&edit_id=' . $row['id'], '<i class="fas fa-edit"></i>', array('onclick' => "return confirm('Do you want edit this record?')")) . "</td>";
+					echo "<td>" . anchor('dashboard_controller/delete_trainor?id=' . $row['id'], '<i class="fas fa-trash-alt" style="color:red;"></i>', array('onclick' => "return confirm('Do you want delete this record?')")) . "</td>";
 					echo "</tr>";
 				}
 

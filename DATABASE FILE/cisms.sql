@@ -132,7 +132,7 @@ INSERT INTO `users` (`id`, `fname`, `lname`, `email`, `password`, `user_type`) V
 (37, 'Liam', 'Moore', 'liamoore@gmail.com', 'Password@123', 'student'),
 (38, 'Steven', 'Johnson', 'steven@gmail.com', 'Password@123', 'mentor'),
 (39, 'Daniel', 'Taylor', 'daniel@gmail.com', 'Password@123', 'mentor'),
-(40, 'Harbor', 'University', 'harboruni@gmail.com', 'Password@123', 'university'),
+(40, 'Harbor', 'University', 'harboruni@gmail.com', 'Password@123', 'super_admin'),
 (41, 'Ellie', 'Randolph', 'ellie@gmail.com', 'Password@123', 'student'),
 (42, 'Sean', 'Luster', 'sean@gmail.com', 'Password@123', 'student');
 

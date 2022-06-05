@@ -1,14 +1,14 @@
 <main role="main" class="col-md-12 ml-sm-auto col-lg-10 px-4">
 
 	<?php 
-			if($this->session->has_userdata('log_email')){
+			if($this->session->has_userdata('email')){
 			//$session_data = $this->session->userdata();
-			$email = $this->session->userdata('log_email');
+			$email = $this->session->userdata('email');
 			$id = $this->session->userdata('id');
 			$fname = $this->session->userdata('fname');
 			$lname = $this->session->userdata('lname');
 			$user_type = $this->session->userdata('user_type');
-			// echo $log_email;
+			// echo $email;
 			// echo $id;
 			// print_r($user_data);
 			//print_r($session_data);

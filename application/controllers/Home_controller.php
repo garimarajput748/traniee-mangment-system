@@ -66,7 +66,7 @@ class Home_controller extends CI_Controller
 				       $result = $this->home_model->insert_data($reg_fname, $reg_lname, $reg_email, $reg_password, $user_type);
 
 				       $get = $this->home_model->get_details($reg_email);
-				       $session_data = array('log_email' => $reg_email, 'id'=> $get[0]['id'], 'fname' => $get[0]['fname'], 'lname' => $get[0]['lname'], 'user_type' => $get[0]['user_type']);
+				       $session_data = array('email' => $reg_email, 'id'=> $get[0]['id'], 'fname' => $get[0]['fname'], 'lname' => $get[0]['lname'], 'user_type' => $get[0]['user_type']);
 			
 						$this->session->set_userdata($session_data);
                      
@@ -78,9 +78,9 @@ class Home_controller extends CI_Controller
 							{
 								redirect('dashboard_controller/mentor_dashboard/', 'refresh');
 							}
-							else if ($user_type == 'university' )
+							else if ($user_type == 'super_admin' )
 							{
-								redirect('dashboard_controller/university_dashboard/', 'refresh');
+								redirect('dashboard_controller/admin_dashboard/', 'refresh');
 							}
 			                }
  		    
@@ -116,17 +116,17 @@ class Home_controller extends CI_Controller
     	 	// preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,20}$/', $password)
 public function login(){
 
-	$log_email = $this->input->post('log_email');
+	$email = $this->input->post('email');
 		$log_password = $this->input->post('log_password');
 
-		$check_login = $this->home_model->check_login($log_email, $log_password);
+		$check_login = $this->home_model->check_login($email, $log_password);
 
 		if($check_login['status'] == 1)
 		{		
-				$get = $this->home_model->get_details($log_email);
+				$get = $this->home_model->get_details($email);
 
 				
-				$session_data = array('log_email' => $log_email, 'id'=> $get[0]['id'], 'fname' => $get[0]['fname'], 'lname' => $get[0]['lname'], 'user_type' => $get[0]['user_type']);
+				$session_data = array('email' => $email, 'id'=> $get[0]['id'], 'fname' => $get[0]['fname'], 'lname' => $get[0]['lname'], 'user_type' => $get[0]['user_type']);
 			
 				$this->session->set_userdata($session_data);
 
@@ -138,9 +138,9 @@ public function login(){
 				{
 					redirect('dashboard_controller/mentor_dashboard/', 'refresh');
 				}
-				else if ($get[0]['user_type'] == 'university' )
+				else if ($get[0]['user_type'] == 'super_admin' )
 				{
-					redirect('dashboard_controller/university_dashboard/', 'refresh');
+					redirect('dashboard_controller/admin_dashboard/', 'refresh');
 				}
 
 		}

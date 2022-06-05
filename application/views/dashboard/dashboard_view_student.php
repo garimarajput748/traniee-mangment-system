@@ -7,13 +7,13 @@
 		// if (isset($read_set_value)) {
 		// echo $this->session->userdata('name');
 		// }
-			if($this->session->has_userdata('log_email')){
+			if($this->session->has_userdata('email')){
 
-			$email = $this->session->userdata('log_email');
+			$email = $this->session->userdata('email');
 			$id = $this->session->userdata('id');
 			$fname = $this->session->userdata('fname');
 			$lname = $this->session->userdata('lname');
-			// echo $log_email;
+			// echo $email;
 			// echo $id;
 			echo $fname." ".$lname;
 

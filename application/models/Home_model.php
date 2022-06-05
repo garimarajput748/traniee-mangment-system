@@ -36,9 +36,9 @@ if(!defined('BASEPATH'))
 
         }
 
-         function check_login($log_email, $log_password)
+         function check_login($email, $log_password)
 	{
-		$this->db->where('email', $log_email);
+		$this->db->where('email', $email);
 		$this->db->where('password', $log_password);
 		$result = $this->db->get('users')->result_array();
 
@@ -53,9 +53,9 @@ if(!defined('BASEPATH'))
 		return $response;
 	} 
 
-	function get_details($log_email){
+	function get_details($email){
 
-		$this->db->where('email', $log_email);
+		$this->db->where('email', $email);
 		$result = $this->db->get('users')->result_array();
 		return $result;
 
